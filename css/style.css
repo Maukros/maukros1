@@ -1,0 +1,817 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Josefin+Sans&family=Oswald:wght@200&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.5rem;
+}
+:root{
+    --bg-color: #101010;
+    --secound-bg-color: #191919;
+    --text-color: #fff;
+    --secound-color: #c6c9d8bf;
+    --main-color: #f9004d;
+    --big-font: 7.0rem;
+    --big-font1: 5.0rem;
+    --big-font2: 9rem;
+    --h2-font: 4,2rem;
+    --p-font: 1.1rem;
+
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(10, 10, 13, 0.6);
+    padding: 25px 15%;
+    box-shadow: 2px 2px 5px rgb(80, 89, 92);
+    transition-duration: .3s;
+}
+.logo{
+    color: var(--text-color);
+    font-size: 25px;
+    font-family: "Raleway";
+    font-weight: bold;
+    text-shadow: 3px 3px rgba(20, 3, 3, 0.8);    
+    letter-spacing: 2px;
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: "Raleway";
+    font-weight: bold;
+    padding: 10px 20px;
+    text-shadow: 3px 3px rgb(11, 1, 1);
+    letter-spacing: 2px;
+
+}
+.navbar a::after{
+   content: '';
+   position: absolute;
+   width: 0%;
+   height: 2px;
+   background: var(--main-color);
+   left: 0;
+   bottom: -4px;
+   transition: ease .4s;
+  
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+#menu-icon{
+    font-size: 32px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+
+}
+/*------ Home -------*/
+section{
+    padding: 120px 15%;
+}
+.home{
+    height: 100vh;
+    width: 100%;
+    background: url(../img/gale.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+.home-text h1{
+    margin: 20px 0px 20px;
+    font-size: var(--big-font);
+    font-family: "Inspiration";
+    font-weight: normal;
+    text-shadow: 3px 4px rgb(17, 4, 4);
+    letter-spacing: 1px;
+}
+span{
+    color: var(--main-color);
+}
+.home-text h3{
+    font-size: 25px;
+    margin-bottom: 55px;
+    text-shadow: 3px 4px rgb(17, 4, 4);
+    letter-spacing: 2px;
+}
+.foto img{
+    border-radius: 50%;
+    width: 30%;
+    border: var(--main-color) 2px solid;
+          
+}
+
+/* ------- Servicios ----------*/
+.servicio{
+	
+    background-image: url(/img/cassete.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+	
+.text-servicio{
+   text-align: center;
+}
+.text-servicio h2{
+    font-size: var(--big-font1);
+    margin-bottom: 15px;
+}
+.box-content{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 3rem;
+    align-items: center;
+    margin-top: 3.5rem;
+}
+.card{
+	height: 365px;
+	width: 300px;
+	padding: 10px 15px;
+	background: #0a0a0ab9;
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+.card i{
+	font-size: 50px;
+	display: block;
+	text-align: center;
+	margin: 25px 0px;
+	color: #f9004d;
+}
+h5{
+	color: white;
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+.pra p{
+	color: #fcfc;
+	font-size: 16px;	
+	line-height: 30px;
+	margin-bottom: 1px;
+}
+.card .button{
+	background-color:#f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 9px 22px;
+	border-radius: 30px;
+	transition: .4s; 
+}
+.card .button:hover{
+	background-color: transparent;
+	border: 2px solid #f9004d;
+	cursor: pointer;
+}
+.card:hover{
+    transform: translateY(-8px);
+
+}
+
+
+ /* ------- Fin de Servicios ---------*/
+
+ /* ------   videos --------------------*/
+ .video{
+	
+    background: #bb0224;
+ }
+
+ .video-content{
+    display: grid;
+     grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+     grid-gap: 3rem;
+     align-items: center;
+     margin-top: 3.5rem;
+     cursor: pointer;
+ }
+ .text-video{
+    text-align: center;
+ }
+ .text-video h2{
+     font-size: var(--big-font1);
+     margin-bottom: 15px;
+ }
+ .box video{
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all .30s;
+  
+}
+.box h5{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.box p{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.box video:hover{
+    transform: scale(1.1);
+   
+}
+/* -------- Fin De Videos ----*/
+
+
+/* ---------- Footer ----- */
+footer{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background: #070707e7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+footer p:nth-child(1){
+	font-size: 20px;
+	color: white;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+footer p:nth-child(2){
+	color: white;
+	font-size: 17px;
+	width: 500px;
+	text-align: center;
+	line-height: 26px;
+}
+.social{
+	display: flex;
+}
+.social a{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  #f9004d;
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+.social a:hover{
+	transform: scale(1.3);
+	transition: .3s;
+}
+.end{
+	position: absolute;
+	color:#f9004d;
+	bottom: 35px;
+	font-size: 14px; 
+}
+/* --------  Fin deL FOOTER -------*/ 
+
+/*--------Pagina Historia----*/
+.historia{
+    height: 100vh;
+    width: 100%;
+    background: url(../img/history7.jfif);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+.historia-text h1{
+    /*background: rgba(54, 1, 20, 0.2);*/
+    margin: 1px 2px 3px;
+    font-size: var(--big-font2);
+    font-family: "Inspiration";
+    font-weight: normal;
+    text-shadow: 4px 4px rgb(10, 0, 0);
+    letter-spacing: 3px;
+}
+/*--------- Fin de Pagina Historia----------*/
+
+
+/*--------  Pagina Artistas  --------------*/
+.artista{
+    height: 100vh;
+    width: 100%;
+    background: url(../img/cabeceraartista.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+.artista-text h1{
+    /*background: rgba(54, 1, 20, 0.2);*/
+    margin: 1px 2px 3px;
+    font-size: var(--big-font2);
+    font-family: "Inspiration";
+    font-weight: normal;
+    text-shadow: 4px 4px rgb(10, 0, 0);
+    letter-spacing: 3px;
+}
+.contenedor-columnas{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 3rem;
+    align-items: center;
+    margin-top: 3.5rem;
+}
+.columnax3 img{
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all .30s;
+}
+.columnax3 h4{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.columnax3 p{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.columnax3 img:hover{
+    transform: scale(1.1);
+   
+}
+.artistaxx{
+    background: #f80350;
+}
+.text-artista h2{
+    text-align: center;
+    font-size: var(--big-font1);
+    font-family: "Oswald";
+    text-shadow: 3px 3px rgb(17, 4, 4);
+    letter-spacing: 15px;
+    margin-bottom: 25px;
+}
+.contenedor-artxx{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 3rem;
+    align-items: center;
+    margin-top: 3.5rem;
+}
+.columna img{
+    max-width: 100%;
+    width: 3000px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border:2px solid #fff;
+    transition: all .30s;
+    
+}
+.columna h5{
+    font-size: 25px;
+    font-family: "Italiana";
+    text-shadow: 2px 2px rgb(17, 4, 4);
+    letter-spacing: 2px;
+}
+
+
+
+
+
+/*--------  Fin Pagina de Artistas  --------------*/
+
+/*--------  Pagina DE GALERIA  --------------*/
+.galeria{
+    height: 100vh;
+    width: 100%;
+    background: url(../img/gale4.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+.galeria-text h1{
+    /*background: rgba(54, 1, 20, 0.2);*/
+    margin: 1px 2px 3px;
+    font-size: var(--big-font2);
+    font-family: "Inspiration";
+    font-weight: normal;
+    text-shadow: 4px 4px rgb(10, 0, 0);
+    letter-spacing: 3px;
+}
+.galeriax{
+    text-align: center;
+ }
+ .text-galeriax h2{
+     font-size: var(--big-font1);
+     margin-bottom: 15px;
+ }
+ .text-galeriax p{
+    font-size: 25px;
+ }
+.contenedor-galery{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 3rem;
+    align-items: center;
+    margin-top: 3.5rem;
+}
+.galery img{
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border:2px solid #fff;
+    transition: all .30s;
+}
+.galery img:hover{
+    transform: scale(1.1);
+   
+}
+/*--------  Fin Pagina de GALERIA  --------------*/
+
+/*------- Pagina Contacto-------*/
+.contacto{
+    height: 100vh;
+    width: 100%;
+    background: url(../img/contacto5.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+.contacto-text h1{
+    /*background: rgba(54, 1, 20, 0.2);*/
+    margin: 1px 2px 3px;
+    font-size: var(--big-font2);
+    font-family: "Inspiration";
+    font-weight: normal;
+    text-shadow: 4px 4px rgb(10, 0, 0);
+    letter-spacing: 3px;
+}
+.contact{
+    background: #171415;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    grid-gap: 6rem;
+}
+.contact-img img{
+    max-width: 100%;
+    width: 720px;
+    height: auto;
+    border-radius: 10px;
+    border:2px solid #fff;
+}
+.contac-form h1{
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.contac-form p{
+    color: #c6c9d8bf;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 1.1rem;
+    margin-bottom: 3.8rem;
+}
+.contac-form form{
+    position: relative;
+}
+.contac-form form input, form textarea{
+    width: 100%;
+    padding: 17px;
+    border: none;
+    outline: none;
+    background: #191919;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+.contac-form textarea{
+    resize: none;
+    height: 200px;
+}
+.contac-form form .btn{
+    display: inline-block;
+    background: #f80350;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 220px;
+    transform: ease .20s;
+    cursor: pointer;
+    
+}
+.contac-form form .btn:hover{
+    border: 2px solid #c6c9d8bf;
+    background: transparent;
+    transform: scale(1.1);    
+}
+/* ---------- @MEDIA  ---------*/
+@media (max-width: 1220px){
+    header{
+        padding: 18px 4%;
+        transition: .2s;        
+    }
+    section{
+    padding: 80px;
+    transition: .2s;    
+    }
+    :root{
+        --big-font: 6.0rem;
+        --big-font1: 4.0rem;
+        --big-font2: 8rem;
+        --h2-font: 3.2rem;
+        --p-font: 1rem;
+        transition: .2s;
+        
+    }
+    .logo{
+        font-size: 20px;
+        transition: .2s;
+        
+    }
+    .home-text h3{
+        font-size: 20px;
+    }
+}
+@media (max-width: 990px){
+    .home .servicio{
+        height: 80vh;
+        transition: .2s;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .navbar{
+        position: absolute;
+        top: -700px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #171415;
+        text-align: left;
+        transition: .3s;        
+    }
+    .navbar a{
+        display: block;
+        padding: 1.1rem;
+        margin: 1.3rem;
+        border-left: 2px solid var(--text-color);
+    }
+    .navbar a{
+        background: #bb0224;
+    }
+    .navbar a::after{
+        display: none;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+}
+@media (max-width: 768px){
+    .home .servicio{
+        height: 70vh;
+        transition: .2s;
+    }
+    :root{
+        --big-font: 5.0rem;
+        --big-font1: 3.0rem;
+        --big-font2: 7rem;
+        --h2-font: 2.2rem;
+        --p-font: 1rem;
+        transition: .2s;
+        
+    }
+    .logo{
+        font-size: 18px;
+        transition: .2s;        
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .navbar{
+        position: absolute;
+        top: -350px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #171415;
+        text-align: left;
+        transition: .3s;        
+    }
+    .navbar a{
+        display: block;
+        padding: 0.7rem;
+        margin: 1rem;
+        border-left: 2px solid var(--text-color);
+    }
+    .navbar a{
+        background: #bb0224;
+    }
+    .navbar a::after{
+        display: none;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+}
+@media (max-width: 576px){
+    .home{
+        height: 60vh;
+        transition: .2s;
+    }
+    :root{
+        --big-font: 2.4rem;
+        --big-font1: 2.5rem;
+        --big-font2: 6rem;
+        --h2-font: 2.0rem;        
+        transition: .2s;        
+    }
+    .home-text h3{
+        font-size: 12px;
+    }
+    
+    
+}
+@media (max-width: 360px){
+    /*------ P A G I N A   H O M E -----*/
+    .home{
+        height: 70vh;
+        transition: .2s;
+    }
+    :root{
+        
+        --big-font1: 2.0rem;
+        --big-font2: 5rem;
+        --h2-font: 1.8rem;        
+        transition: .2s;
+        
+    }
+    
+    .box-content{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+        grid-gap: 3rem;
+        align-items: center;
+        margin-top: 3.5rem;
+    }
+    .card{
+        height: 365px;
+        width: 200px;
+        padding: 10px 15px;
+        background: #0a0a0ab9;
+        border-radius: 20px;
+        margin: 15px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    .card i{
+        font-size: 50px;
+        display: block;
+        text-align: center;
+        margin: 25px 0px;
+        color: #f9004d;
+    }
+    h5{
+        color: white;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .pra p{
+        color: #fcfc;
+        font-size: 16px;	
+        line-height: 30px;
+        margin-bottom: 1px;
+    }
+    .card .button{
+        background-color:#f9004d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 9px 22px;
+        border-radius: 30px;
+        transition: .4s; 
+    }
+    .card .button:hover{
+        background-color: transparent;
+        border: 2px solid #f9004d;
+        cursor: pointer;
+    }
+    .card:hover{
+        transform: translateY(-8px);
+    
+    }
+    /*----- F I N  D E    H O M E   --------*/
+   
+    /*------ P A G I N A    A R T I S T A -----*/
+    .artista{
+        height: 70vh;
+        width: 100%;
+       
+    }
+    .contenedor-columnas{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
+        grid-gap: 2rem;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+    .text-artista h2{
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        text-shadow: 1px 1px rgb(10, 0, 0);
+        letter-spacing: 1px;
+    }
+    .contenedor-artxx{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+        grid-gap: 2rem;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+    .columna img{
+        max-width: 100%;
+        width: 3000px;
+        height: auto;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        border:2px solid #fff;
+        transition: all .30s;
+        
+    }
+    .columna h5{
+        font-size: 14px;
+        
+        text-shadow: 1px 1px rgb(17, 4, 4);
+        letter-spacing: 1px;
+    }
+    /*----- F I N    D E   A R T I S T A   --------*/
+
+    /*------ P A G I N A    G A L E R I A -----*/
+    .galeria{
+        height: 70vh;
+        width: 100%;       
+    }
+    .contenedor-galery{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+        grid-gap: 2rem;
+        align-items: center;
+        margin-top: 2.5rem;
+    }
+
+}
